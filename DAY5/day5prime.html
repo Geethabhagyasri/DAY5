@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="number" id="num1" value="">
+<button onclick="lucky()">submit</button>
+</body>
+<script>
+	function lucky()
+	{
+		var a,flag,i
+        var a=document.getElementById('num1').value;
+        var  flag = false;
+    for ( i = 2; i <= a / 2; ++i) {
+      // condition for nonprime number
+      if (a % i == 0) {
+        flag = true;
+        break;
+      }
+    }
+
+    if (!flag)
+      alert("is a prime");
+    else
+      alert("Not a prime");
+  }
+
+</script>
+</html>
